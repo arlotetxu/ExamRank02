@@ -6,7 +6,7 @@
 /*   By: jflorido <jflorido@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/03 20:16:46 by jflorido          #+#    #+#             */
-/*   Updated: 2023/09/04 16:57:37 by jflorido         ###   ########.fr       */
+/*   Updated: 2023/09/04 18:30:40 by jflorido         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,10 +46,9 @@ unsigned int lcm(unsigned int a, unsigned int b)
 
 	if (a == 0 || b == 0)
 		return (0);
+	n = b;
 	if (a > b)
 		n = a;
-	else
-		n = b;
 	while (1)
 	{
 		if (n % a == 0 && n % b == 0)
@@ -61,8 +60,8 @@ unsigned int lcm(unsigned int a, unsigned int b)
 
 int	main(void)
 {
-	int	a =50;
-	int	b = 25;
+	int	a =4;
+	int	b = 30;
 
 	printf("Resultado LCM: %d\n", lcm(a, b));
 	return (0);
