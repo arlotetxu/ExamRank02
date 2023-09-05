@@ -6,7 +6,7 @@
 /*   By: jflorido <jflorido@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/04 19:34:24 by jflorido          #+#    #+#             */
-/*   Updated: 2023/09/04 20:45:16 by jflorido         ###   ########.fr       */
+/*   Updated: 2023/09/05 13:10:31 by jflorido         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,13 +48,20 @@ int	ft_quick_atoi(char *str)
 	return (n);
 }
 
-void	ft_print_nb()
+void	ft_print_nb(int n)
 {
-		
+	char	*hex;
+
+	hex = "0123456789abcdef";
+	if (n > 16)
+		ft_print_nb(n / 16);
+	write(1, &hex[n % 16], 1);
 }
 
-int	main(void)
+int	main(int ac, char **av)
 {
-	printf("Atoi: %d\n", ft_quick_atoi("127"));
+	if (ac == 2)
+		ft_print_nb(ft_quick_atoi(av[1]));
+	write(1, "\n", 1);
 	return (0);
 }
