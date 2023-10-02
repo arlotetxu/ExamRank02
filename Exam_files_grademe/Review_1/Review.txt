@@ -1,0 +1,8 @@
+ft_atoi_base
+res = res * str_base + (ft_get_index(*str, str_base));
+
+reverse_bits
+res = res * 2 + (octet % 2);
+
+ft_atoi
+res = (res * 10) + (*str - 0);
