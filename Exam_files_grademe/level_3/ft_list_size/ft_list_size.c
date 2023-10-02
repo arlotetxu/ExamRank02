@@ -6,7 +6,7 @@
 /*   By: jflorido <jflorido@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/01 14:21:47 by jflorido          #+#    #+#             */
-/*   Updated: 2023/09/01 14:31:47 by jflorido         ###   ########.fr       */
+/*   Updated: 2023/10/02 15:55:16 by jflorido         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	ft_list_size(t_list *begin_list)
 	while (check)
 	{
 		count++;
-		check->next;
+		check = check->next;
 	}
 	return (count);
 }
